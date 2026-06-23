@@ -29,6 +29,9 @@ Thumbs.db
 .cursor/
 .aider*
 
+# 本项目专属：Claude Code 项目指令不上传
+CLAUDE.md
+
 # 上传/发布产物（按需）
 publish/
 drafts/
