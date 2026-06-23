@@ -205,12 +205,6 @@ node skills/assemble.mjs
 - [ ] 知识库 CDN 自动更新
 - [ ] 知识图谱可视化
 
-### 🔮 Phase 3：作者社区（2026 Q4）
-- [ ] 创作者社区（小红书 / Discord）
-- [ ] 选题雷达（实时热点扫描）
-- [ ] 写作训练营
-- [ ] 签约平台对接
-
 ---
 
 ## 💡 设计哲学
@@ -270,7 +264,6 @@ node skills/assemble.mjs
 
 - **Robert McKee** — 《Story》提供的角色/结构方法论
 - **Donald Maass** — 《Writing the Breakout Novel》提供的人物深度技法
-- **「命运之书」** Skill — 项目结构参考
 - **虾评 / Coze** — Skill 平台基础设施
 - 所有早期测试用户 — 你们的反馈让这个项目更好
 
@@ -280,7 +273,7 @@ node skills/assemble.mjs
 
 - **问题反馈**：[GitHub Issues](../../issues)
 - **功能建议**：[GitHub Discussions](../../discussions)
-- **商业合作**：通过 Issues 联系我们
+- **商业合作**：1392612377@qq.com
 - **作者博客**：（待补充）
 
 ---
