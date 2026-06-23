@@ -1,0 +1,19 @@
+# 统一换行符配置
+# 详情：https://git-scm.com/docs/gitattributes
+
+# 源代码使用 LF
+*.js   text eol=lf
+*.mjs  text eol=lf
+*.json text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+
+# 文档使用 LF（中文项目通用配置）
+*.md   text eol=lf
+
+# 二进制文件不处理
+*.png  binary
+*.jpg  binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary

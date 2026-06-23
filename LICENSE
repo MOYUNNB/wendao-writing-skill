@@ -1,0 +1,152 @@
+Business Source License 1.1
+
+Licensor:             问道写作项目团队
+Licensed Work:        问道写作 (WenDao Writing) v1.0.0
+                       The Licensed Work includes all source code,
+                       documentation, prompts, and configuration files
+                       in this repository.
+Change Date:          2030-06-23
+Change License:       Apache License, Version 2.0
+
+Additional Use Grant:
+
+  You may use the Licensed Work for:
+
+  (a) Personal use, learning, and self-education;
+  (b) Academic research and non-commercial teaching;
+  (c) Testing and evaluation in non-production environments;
+  (d) Internal evaluation by potential commercial licensees;
+
+  Provided that:
+
+  (i) You do not distribute the Licensed Work or derivative works
+      to third parties as a competing product or service;
+  (ii) You do not use the Licensed Work to provide a competing
+       commercial service that replaces or substitutes the
+       functionality of the original Licensed Work;
+  (iii) Production use, commercial use, and redistribution as
+        part of a commercial product or service require a
+        separate written commercial license from the Licensor.
+
+For purposes of this Additional Use Grant:
+
+  "Competing product or service" means any product or service
+  that primarily functions as a Socratic-method-based novel
+  writing assistance tool, or that markets itself as a
+  derivative or alternative to the Licensed Work.
+
+  "Production use" means use of the Licensed Work in a
+  commercial offering or service that is made available to
+  end users for purposes other than evaluation.
+
+Notice:
+
+  The Business Source License (this document, or the "License")
+  is not an Open Source license. However, the Licensed Work
+  will eventually be made available under the Change License
+  (Apache License, Version 2.0) on the Change Date indicated
+  above. The Licensor may also elect to make the Licensed Work
+  available under the Change License at any earlier time.
+
+  For more information about the Business Source License,
+  see: https://mariadb.com/bsl11/
+
+========================================================================
+
+Full Business Source License 1.1 Text:
+
+Business Source License 1.1
+
+Licensor:  问道写作项目团队
+Licensed Work:  问道写作 (WenDao Writing) v1.0.0
+
+The Licensor hereby grants you the right to copy, modify,
+create derivative works, redistribute, and make non-production
+use of the Licensed Work. The Licensor may make an Additional
+Use Grant permitting production use, commercial use, or
+redistribution of the Licensed Work, provided that such
+Additional Use Grant is set forth in this License.
+
+For purposes of this License:
+
+1. "Additional Use Grant" means the additional permission to
+   use the Licensed Work as set forth in this License.
+
+2. "Change Date" means the date specified in this License on
+   which the Licensed Work will be made available under the
+   Change License.
+
+3. "Change License" means the license specified in this
+   License under which the Licensed Work will be made
+   available on the Change Date.
+
+4. "Licensed Work" means the work of authorship, including
+   but not limited to source code, object code, documentation
+   and other files, to which the Licensor applies this
+   License.
+
+5. "Licensor" means the individual(s) or entity(ies) granting
+   this License.
+
+6. "You" means each licensee.
+
+You may use the Licensed Work as specified above, subject to
+the terms of this License.
+
+The License shall apply to the Licensed Work as a whole and
+to each part of the Licensed Work individually. Any separate
+licensing terms for a particular file or component shall be
+specified in a comment, README, or other documentation
+associated with that file or component.
+
+If you make a Contribution to the Licensed Work, such
+Contribution is deemed to be part of the Licensed Work and
+is subject to the License.
+
+If you exercise any of the rights granted in this License,
+you accept and agree to be bound by the terms of this License.
+
+If you distribute all or part of the Licensed Work in
+source or object form, you must provide a copy of this
+License with the Licensed Work.
+
+If you distribute all or part of the Licensed Work in
+compiled or object form only, you must prominently
+display the License in a location where it is easily
+visible to recipients.
+
+The Licensor may, at its sole discretion, grant additional
+rights to use the Licensed Work beyond those granted in
+this License, provided that such additional rights are
+set forth in a separate written agreement.
+
+The License is granted in perpetuity, subject to the
+Change Date and Change License specified above.
+
+The Licensor may charge a fee for the Additional Use Grant
+or for any other rights granted beyond this License.
+
+This License does not grant any rights in the trademarks,
+service marks, or logos of the Licensor.
+
+THE LICENSED WORK IS PROVIDED "AS IS" WITHOUT WARRANTY
+OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT
+SHALL THE LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT,
+OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH
+THE LICENSED WORK OR THE USE OR OTHER DEALINGS IN THE
+LICENSED WORK.
+
+========================================================================
+
+Trademark Notice:
+
+"问道写作" and "WenDao Writing" are trademarks of the
+Licensor. This License does not grant permission to use
+the trade names, trademarks, service marks, or product
+names of the Licensor.
+
+For commercial licensing inquiries, please open an issue
+at: https://github.com/[your-username]/wendao-writing-skill/issues

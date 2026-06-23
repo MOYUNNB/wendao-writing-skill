@@ -1,0 +1,48 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# 系统
+*.log
+*.tmp
+*.bak
+*.swp
+
+# 临时文件
+*.local
+.env.local
+
+# Claude Code / Cursor 等 AI 工具
+.claude/settings.local.json
+.cursor/
+.aider*
+
+# 上传/发布产物（按需）
+publish/
+drafts/
+*.zip
+*.tar.gz
+
+# 测试报告
+coverage/
+.nyc_output/
+
+# OS
+.DS_Store
+desktop.ini
+
+# Windows
+$RECYCLE.BIN/
+*.lnk

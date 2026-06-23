@@ -1,0 +1,59 @@
+{
+  "name": "问道写作",
+  "version": "1.0.0",
+  "description": "基于苏格拉底接生法的网文创作引导工具。帮作者想，不帮作者写——通过精准提问帮你想清楚选题、世界观、角色、故事结构、章节、伏笔。永远不生成正文。",
+  "short_description": "网文创作苏格拉底引导工具",
+  "tags": [
+    "网文",
+    "小说",
+    "创作",
+    "苏格拉底",
+    "大纲",
+    "人设",
+    "世界观",
+    "伏笔"
+  ],
+  "category": "创作助手",
+  "target_users": "网文作者（特别是新人）",
+  "opening_message": "你好！我是问道写作，帮你想清楚而不是替你写。\n\n我们从哪个阶段开始？\n\n1. ① 选题锚定 — 我有脑洞但还没定型\n2. ② 世界观锻造 — 我要设计世界规则\n3. ③ 角色深潜 — 我要添加/完善角色\n4. ④ 故事脊梁 — 我要梳理主线结构\n5. ⑤ 黄金三章 — 我要设计开篇\n6. ⑥ 章节推演 — 我要规划具体章节\n7. ⑦ 伏笔雷达 — 我要埋/查伏笔\n8. ⑧ 收线结算 — 我的书快写完了\n\n（也可以直接说\"我要开新书\"、\"我的主角有点单薄\"等，我会自动识别）",
+  "suggested_questions": [
+    "我要开一本玄幻小说",
+    "我的主角设定感觉很单薄",
+    "我不知道故事该怎么发展",
+    "我的大纲写到一半就卡住了",
+    "我的反派写得太无聊",
+    "怎么设计一个让人记住的开篇？"
+  ],
+  "platforms": [
+    "虾评 Skill 市场",
+    "Coze 商店",
+    "扣子 Bot"
+  ],
+  "skill_files": {
+    "main": "SKILL.md",
+    "references": [
+      "01-concept-anchor.md",
+      "02-world-forge.md",
+      "03-character-dive.md",
+      "04-main-plot.md",
+      "05-golden-three.md",
+      "06-chapter-plan.md",
+      "07-foreshadow.md",
+      "08-resolution.md",
+      "story-bible-schema.md",
+      "export-template.md"
+    ]
+  },
+  "submission_priority": {
+    "P0": ["虾评 Skill 市场", "Coze 商店"],
+    "P1": ["扣子 Bot"]
+  },
+  "constraints": {
+    "never_generate_prose": true,
+    "max_questions_per_response": 3,
+    "tone": "coach_not_referee",
+    "token_target_min": 3500,
+    "token_target_max": 4500,
+    "token_absolute_max": 6000
+  }
+}
