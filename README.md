@@ -76,7 +76,7 @@
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/[你的用户名]/wendao-writing-skill.git
+git clone https://github.com/MOYUNNB/wendao-writing-skill.git
 cd wendao-writing-skill
 
 # 2. 拼接生成 SKILL.md
