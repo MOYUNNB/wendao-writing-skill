@@ -8,8 +8,15 @@
 
 ```typescript
 interface SessionStoryBible {
+  // 顶层：作品类型（开场白时确定）
+  length_type?: 'long' | 'short';  // 长篇 8 模块 | 短篇 5 模块
+
+  // ==========================================
+  // 长篇路径（length_type === 'long'，8 模块）
+  // ==========================================
+
   // ① 选题锚定
-  concept: {
+  concept?: {
     one_liner?: string;             // 一句话法则
     genre?: string;                 // 类型
     core_appeal?: string;           // 核心爽点
@@ -19,13 +26,13 @@ interface SessionStoryBible {
   } | null;
 
   // ② 世界观锻造
-  world: {
+  world?: {
     core_rules?: string[];          // 核心规则（3-5 条）
     power_system_overview?: string; // 力量体系概要
   } | null;
 
   // ③ 角色深潜
-  characters: {
+  characters?: {
     name: string;
     role: string;                   // protagonist/antagonist/ally/mentor/rival
     conscious_desire?: string;      // 显性欲望
@@ -35,7 +42,7 @@ interface SessionStoryBible {
   }[];
 
   // ④ 故事脊梁
-  main_plot: {
+  main_plot?: {
     controlling_idea?: string;
     structure_type?: string;        // core_fission/three_act/fichtean/...
     checkpoints?: {
@@ -47,14 +54,14 @@ interface SessionStoryBible {
   } | null;
 
   // ⑤ 黄金三章
-  golden_three: {
+  golden_three?: {
     chapter_1_hook?: string;
     chapter_2_escalation?: string;
     chapter_3_climax?: string;
   } | null;
 
   // ⑥ 章节推演
-  chapter_plan: {
+  chapter_plan?: {
     chapter: number;
     goal?: string;
     conflict?: string;
@@ -62,15 +69,61 @@ interface SessionStoryBible {
   }[];
 
   // ⑦ 伏笔雷达
-  foreshadowing: {
+  foreshadowing?: {
     description: string;
     expected_payoff?: string;
   }[];
 
   // ⑧ 收线结算
-  resolution: {
+  resolution?: {
     main_ending?: string;
     completion_status?: string;     // 'in_progress' | 'completed'
+  } | null;
+
+  // ==========================================
+  // 短篇路径（length_type === 'short'，5 模块）
+  // ==========================================
+
+  // ① 情绪锚点（替代长篇 concept）
+  emotion?: {
+    unity_of_effect?: string;       // 主导情绪（如"压抑中的希望"）
+    hook_one_liner?: string;        // 一句话故事钩子
+    genre?: string;                 // 类型
+  } | null;
+
+  // ② 意象与极简规则（替代长篇 world）
+  short_world?: {
+    imagery_set?: string[];         // 2-3 个核心意象
+    short_rules?: string;           // 1-2 条规则即冲突
+  } | null;
+
+  // ③ 角色深潜（短篇版）
+  short_characters?: {
+    name: string;
+    role: string;                   // protagonist/antagonist/ally
+    anchor_sentence?: string;       // 一句话人设锚点
+    conscious_desire?: string;
+    unconscious_need?: string;
+    fatal_flaw?: string;
+    killable?: boolean;             // 能否从故事中删掉？
+  }[];
+
+  // ④ 节拍设计（替代长篇 main_plot + golden_three + chapter_plan）
+  beats?: {
+    id: number;                     // 1-8
+    summary: string;                // 这个节拍讲什么
+    emotion_delta: string;          // 情绪变化（如"紧张+1"）
+    word_count: number;             // 500-1000 字
+    imagery_echo?: string[];        // 此节拍出现的意象（用于意象回声）
+  }[];
+  emotion_curve?: string;           // 全文情绪弧线（如"紧张→更紧→爆发→余韵"）
+
+  // ⑤ 结尾类型学（替代长篇 resolution）
+  short_ending?: {
+    type: 'twist' | 'open' | 'circular' | 'unresolved' | 'cut';
+                                     // 5 种结尾：反转/留白/圆形/开放/截断
+    paywall_break_point?: string;   // 付费截断在哪句话
+    unity_check?: string;           // 结尾是否呼应了 unity_of_effect
   } | null;
 }
 ```

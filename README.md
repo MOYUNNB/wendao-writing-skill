@@ -1,10 +1,10 @@
 # 问道写作 · WenDao Writing
 
 > **不是帮你写，而是帮你想。**
-> 基于苏格拉底接生法的网文创作引导工具。
+> 基于苏格拉底接生法的网文 / 短篇创作引导工具。
 
 [![License: BSL 1.1](https://img.shields.io/badge/License-BSL_1.1-orange.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](CHANGELOG.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Platform: 虾评 / Coze](https://img.shields.io/badge/平台-虾评%20%2F%20Coze-purple.svg)](#快速开始)
 
@@ -14,6 +14,7 @@
 
 - 脑子里的故事很精彩，**写下来就变味**？
 - 想写网文赚钱，**却卡在大纲**卡了一周？
+- 想写**千字短篇投知乎/番茄**，却不知道从哪开始？
 - 用 AI 代写工具生成正文，**结果跟自己的文风不搭**？
 - 写完一章不知道**下一章该写什么**，越写越迷茫？
 - 角色越写越**单薄像纸片人**，自己都读不下去？
@@ -24,22 +25,28 @@
 
 ## ✨ 问道写作是什么？
 
-一个**只提问、不写正文**的网文创作引导工具。
+一个**只提问、不写正文**的网文 / 短篇创作引导工具。
 
-把苏格拉底接生法引入网文创作——
+把苏格拉底接生法引入创作——
 像助产士帮助妇女生孩子一样，AI 通过**精准提问**帮作者"生产"自己的想法。
 
 | | 代写工具（ChatGPT / Claude / 各种写手 AI） | 问道写作 |
 |--|----------|---------|
 | **做什么** | 帮你写正文 | 帮你想清楚 |
-| **产出** | 一堆需要修改的文本 | 大纲、人设、设定 |
+| **产出** | 一堆需要修改的文本 | 大纲、人设、设定、节拍、结尾 |
 | **文风污染** | 严重（带 AI 味） | 无（你自己写） |
 | **技能提升** | 越用越依赖 | 越用越会写 |
 | **核心价值** | 短期产出 | 长期能力 |
 
+**v1.1.0 新增短篇模式**：开篇先问"长篇/短篇"，自动加载 5 模块精简路径，覆盖知乎体、番茄短篇、小红书短篇、千字文等场景。
+
 ---
 
-## 🎯 8 大创作模块
+## 🎯 双路径模块体系
+
+v1.1.0 起，**开场白先识别作品类型**，再加载对应模块流：
+
+### 长篇路径 · 8 模块（10 万字以上）
 
 ```
   ① 选题锚定 → ② 世界观锻造 → ③ 角色深潜 → ④ 故事脊梁
@@ -57,6 +64,27 @@
 | ⑥ | **章节推演** | 为每章定义目标、冲突、钩子 | "规划章节" |
 | ⑦ | **伏笔雷达** | 管理伏笔的埋设与回收 | "埋伏笔" |
 | ⑧ | **收线结算** | 确保所有线索回收、角色弧光完成 | "写完了" |
+
+### 短篇路径 · 5 模块（千字-3 万字）
+
+```
+  ① 情绪锚点 → ② 意象与极简规则 → ③ 角色深潜（短篇版）
+                                              ↓
+                                       ④ 节拍设计 → ⑤ 结尾类型学
+```
+
+| # | 模块 | 解决什么问题 | 触发词 |
+|---|------|-------------|--------|
+| ① | **情绪锚点** | 锁定主导情绪 + 一句话钩子 | "写短篇" |
+| ② | **意象与极简规则** | 2-3 意象 + 1-2 规则即冲突 | "短篇设定" |
+| ③ | **角色深潜（短篇版）** | 1-3 人 + 一句话人设 + "能否砍掉" | "短篇角色" |
+| ④ | **节拍设计** | 500-1000 字节拍 + 情绪弧线 | "短篇结构" |
+| ⑤ | **结尾类型学** | 5 种结尾策略（反转/留白/圆形/开放/截断）| "短篇结尾" |
+
+**自动识别触发词**：
+
+- 长篇：`"开新书"` / `"新长篇"` / `"连载"` / `"网络小说"` ...
+- 短篇：`"写短篇"` / `"千字文"` / `"知乎体"` / `"番茄短篇"` / `"微小说"` / `"这篇 5000 字"` ...
 
 **模块可独立进入**——不需要走完全流程，从任何模块开始都行。
 
@@ -86,18 +114,18 @@ node skills/assemble.mjs
 #    把 skills/SKILL.md 内容作为系统提示粘贴
 ```
 
-**输出**：
+**输出**（v1.1.0）：
 
 ```
 📦 问道写作 SKILL.md 拼接工具
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  ✓ 01-core-principles.md            953 tokens
-  ✓ 02-modules-overview.md           734 tokens
-  ✓ 03-modules-detail.md            1373 tokens
-  ✓ 04-methodology-brief.md         1116 tokens
-  ✓ 05-output-and-upgrade.md         661 tokens
+  ✓ 01-core-principles.md           1048 tokens
+  ✓ 02-modules-overview.md          1187 tokens
+  ✓ 03-modules-detail.md            1508 tokens
+  ✓ 04-methodology-brief.md         1421 tokens
+  ✓ 05-output-and-upgrade.md         863 tokens
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  📊 总计                           4838 tokens
+  📊 总计                           6027 tokens
 ✅ 已生成: skills/SKILL.md
 ```
 
@@ -146,7 +174,7 @@ node skills/assemble.mjs
 第5层 代价 → 致命弱点是什么？反派会怎么利用？
 ```
 
-不是每次都必须走完 5 层。AI 根据回答的具体性动态决定深度。
+不是每次都必须走完 5 层。AI 根据回答的具体性动态决定深度。**短篇路径可走 3 层压缩版**（表面/动机/代价）。
 
 ---
 
@@ -171,7 +199,7 @@ node skills/assemble.mjs
 │   │   ├── 03-modules-detail.md
 │   │   ├── 04-methodology-brief.md
 │   │   └── 05-output-and-upgrade.md
-│   └── references/                    # 10 个深度方法论文档（按需读取）
+│   └── references/                    # 13 个深度方法论文档（按需读取）
 │       ├── 01-concept-anchor.md
 │       ├── 02-world-forge.md
 │       ├── 03-character-dive.md
@@ -181,10 +209,15 @@ node skills/assemble.mjs
 │       ├── 07-foreshadow.md
 │       ├── 08-resolution.md
 │       ├── story-bible-schema.md
-│       └── export-template.md
-└── tests/
-    ├── manual-walkthrough.md          # 8 模块验证脚本
-    └── verification-checklist.md      # 验收清单
+│       ├── export-template.md
+│       ├── short-emotion-anchor.md    # ⭐ 短篇 · 情绪锚点（v1.1.0）
+│       ├── short-beat-design.md       # ⭐ 短篇 · 节拍设计（v1.1.0）
+│       └── short-ending-typology.md   # ⭐ 短篇 · 结尾类型学（v1.1.0）
+├── tests/
+│   ├── manual-walkthrough.md          # 8 模块 + 短篇 5 模块验证脚本
+│   ├── verification-checklist.md      # 验收清单
+│   └── eval_cases.json                # AI 评估测试用例
+└── .gitignore
 ```
 
 ---
@@ -193,10 +226,11 @@ node skills/assemble.mjs
 
 ### ✅ Phase 1：Skill 版（当前，2026 Q2）
 - [x] 5 个模块化 Prompt 源文件
-- [x] 10 个深度方法论文档
+- [x] 13 个深度方法论文档（10 长篇 + 3 短篇专题）
 - [x] 自动拼接脚本（assemble.mjs）
-- [x] 8 模块手动验证脚本
+- [x] 8 模块 + 短篇 5 模块手动验证脚本
 - [x] 虾评 / Coze 上架指南
+- [x] **v1.1.0：短篇模式 5 模块分支**（情绪锚点/意象与极简规则/角色深潜短篇版/节拍设计/结尾类型学）
 
 ### 🚧 Phase 2：MCP 版（2026 Q3）
 - [ ] Trae / Claude Code MCP 实现
@@ -264,6 +298,8 @@ node skills/assemble.mjs
 
 - **Robert McKee** — 《Story》提供的角色/结构方法论
 - **Donald Maass** — 《Writing the Breakout Novel》提供的人物深度技法
+- **Edgar Allan Poe** — 《短篇小说论》提供的"单一效果"理论
+- **Ernest Hemingway** — 冰山理论
 - **虾评 / Coze** — Skill 平台基础设施
 - 所有早期测试用户 — 你们的反馈让这个项目更好
 
@@ -282,12 +318,12 @@ node skills/assemble.mjs
 
 如果这个项目对你有帮助，请给我们一个 Star！
 
-[![Star History Chart](https://api.star-history.com/svg?repos=[用户名]/wendao-writing-skill&type=Date)](https://star-history.com/#[用户名]/wendao-writing-skill)
+[![Star History Chart](https://api.star-history.com/svg?repos=MOYUNNB/wendao-writing-skill&type=Date)](https://star-history.com/#MOYUNNB/wendao-writing-skill)
 
 ---
 
 <p align="center">
   <strong>问道写作 · 帮作者想，不帮作者写</strong>
   <br>
-  <sub>Built with ❤️ for Chinese web novelists</sub>
+  <sub>Built with ❤️ for Chinese web novelists & short story writers</sub>
 </p>

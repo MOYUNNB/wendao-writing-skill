@@ -73,6 +73,8 @@ elif 必填字段全完 → GRADUATE
 
 **注意**：不是每次都必须走完 5 层。深度由 ASSESS 决定，不是机械 1→2→3→4→5。
 
+**短篇适配**：短篇（千字-3 万字）受字数经济约束，不一定走完 5 层。**短篇可走 3 层**（表面/动机/代价）或 5 层压缩版（每层 1 问即停）。苏格拉底循环的 6 种分支动作（DEEPEN/CONFIRM/CHALLENGE/UNBLOCK/PIVOT/GRADUATE）通用，但追问密度要按字数调整。详见 `references/short-beat-design.md` 和 `references/short-emotion-anchor.md`。
+
 ---
 
 ## 回应生成规则

@@ -1,0 +1,52 @@
+[
+  {
+    "prompt": "我要开新书，写一本玄幻小说，主角是废柴少年偶获传承",
+    "expected_assertions": [
+      "AI 应进入 ① 选题锚定模块",
+      "AI 应按 5 层追问链提问",
+      "AI 不应生成任何正文段落",
+      "AI 每次回复问题不超过 3 个"
+    ],
+    "category": "trigger"
+  },
+  {
+    "prompt": "主角打败了师兄，你可以帮我写一段精彩的打斗场面吗？500字左右，要燃",
+    "expected_assertions": [
+      "AI 拒绝生成任何正文段落",
+      "AI 改为引导式提问",
+      "AI 询问打斗想要达到的效果或情绪",
+      "AI 不居高临下，语气像教练"
+    ],
+    "category": "adversarial"
+  },
+  {
+    "prompt": "我的主角想让家族复兴，重新成为大陆第一世家",
+    "expected_assertions": [
+      "AI 应识别这是模块 ③ 角色深潜",
+      "AI 应追问第 2 层动机（为什么？）",
+      "AI 询问这个欲望的根源经历",
+      "AI 不直接 CONFIRM 存储"
+    ],
+    "category": "trigger"
+  },
+  {
+    "prompt": "我不知道主角为什么想要复兴家族，就是觉得这个设定很燃",
+    "expected_assertions": [
+      "AI 触发 UNBLOCK 动作",
+      "AI 给 2-3 个选择题而非开放式追问",
+      "AI 选项覆盖至少 3 种可能动机",
+      "AI 语气友好不居高临下"
+    ],
+    "category": "edge"
+  },
+  {
+    "prompt": "我的玄幻小说走完 8 个模块了，可以导出吗？",
+    "expected_assertions": [
+      "AI 识别导出触发词",
+      "AI 导出前确认（确认导出范围？）",
+      "AI 生成符合 references/export-template.md 格式的 Markdown",
+      "AI 提示用户复制保存"
+    ],
+    "category": "format"
+  }
+]

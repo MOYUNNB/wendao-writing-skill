@@ -1,6 +1,7 @@
-# 8 模块 5 层追问链
+# 8 模块 5 层追问链（长篇 · 主路径）
 
 > 每个模块的标准化追问流程。具体详细方法论见 `references/0X-*.md`。
+> **短篇路径（length_type === "short"）的追问链见 `references/short-*.md`**：① 情绪锚点 → ② 意象与极简规则 → ③ 角色深潜（短篇版）→ ④ 节拍设计 → ⑤ 结尾类型学。短篇 5 模块可走 3 层（表面/动机/代价）或 5 层压缩版（每层 1 问即停）。
 
 ---
 
@@ -39,11 +40,9 @@
 ```
 第1层（表面）: 这个角色最想让什么发生？
 第2层（动机）: 为什么？这个欲望的根源是什么经历？
-第3层（矛盾）: 他想要什么 vs 他真正需要什么？一样吗？
-                → McKee: conscious desire vs unconscious desire
-第4层（极限）: 如果保护这个欲望需要背叛最重要的人，他怎么选？
-                → McKee: 真实性格只在压力下的选择中暴露
-第5层（代价）: 他的致命弱点是什么？反派会怎么利用？
+第3层（矛盾）: 他想要什么 vs 他真正需要什么？ → McKee
+第4层（极限）: 保护这个欲望需要背叛最重要的人，他怎么选？
+第5层（代价）: 致命弱点是什么？反派会怎么利用？
 ```
 
 **SB 字段**：`characters[i].{surface, depth, arc, relationships}`
@@ -61,13 +60,7 @@
 第5层: 读者追到第 30 万字，你拿什么让他们继续追？
 ```
 
-**6 种参考结构**（按用户回答动态推荐）：
-- 核心裂变法（玄幻/都市/长篇爽文）
-- 三幕升级版（通用长篇）
-- Fichtean 曲线（悬疑/惊悚）
-- 爽文循环（升级流/系统流）
-- Arc 结构（连载网文/韩式）
-- Save the Cat 15-Beat（剧情流）
+**6 种参考结构**（按用户回答动态推荐，详见 references/04-main-plot.md）：核心裂变法 / 三幕升级版 / Fichtean 曲线 / 爽文循环 / Arc 结构 / Save the Cat 15-Beat
 
 **SB 字段**：`main_plot.{controlling_idea, structure_type, structure_detail, checkpoints, outline}`
 **完成标志**：structure_type 确定、5 个 checkpoints 全有
@@ -131,3 +124,16 @@
 
 **SB 字段**：`resolution.{unresolved_threads, main_ending, character_endings, final_battle, completion_checklist}`
 **完成标志**：unresolved_threads.priority = 'must' 的全部有 proposed_resolution
+
+---
+
+## 短篇路径提示
+
+> length_type === "short" 时加载：
+> - ① 情绪锚点 → `references/short-emotion-anchor.md`
+> - ② 意象与极简规则 → 同上
+> - ③ 角色深潜（短篇版）→ 复用本文件 ③ + 短篇视角（在 references/03-character-dive.md 末尾）
+> - ④ 节拍设计 → `references/short-beat-design.md`
+> - ⑤ 结尾类型学 → `references/short-ending-typology.md`
+>
+> 短篇 5 模块可走 3 层（表面/动机/代价）或 5 层压缩版。详见各专题文件。
