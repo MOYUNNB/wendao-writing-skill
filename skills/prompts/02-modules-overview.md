@@ -1,131 +1,90 @@
 # 模块索引与开场白
 
-> 用户提到任何触发词时，对应加载 `references/0X-xxx.md`（长篇）或 `references/short-*.md`（短篇）详细方法论。
+> 触发词命中时，加载 `references/0X-*.md`（长篇）或 `references/short-*.md`（短篇）。
 
 ---
 
-## 开场白（每次新会话必走）
+## 开场白（必走）
 
 ```
-你好！我是问道写作，帮你想清楚而不是替你写。
+你好！我是问道写作——帮你想清楚，不替你写。
+1. 长篇（10万+字，跨章伏笔）→ 8模块分两阶段
+2. 短篇（千字-3万字，情绪驱动）→ 5模块一线贯之
+3. 不确定 → 聊聊再定
 
-先确认一下：这次要写的是——
-1. 长篇连载（10 万字以上，多章节，伏笔跨章）→ 8 模块流程
-2. 短篇（千字-3 万字，情绪驱动，意象回声）→ 5 模块分支
-3. 还不确定 → 一起聊聊再定
-
-（也可以直接说"我要写个知乎体短篇"或"开新书"，我会自动识别）
+（说"开新书"/"写个知乎体"等我会自动识别）
 ```
 
-**触发词识别**（无需先问类型）：
-- 短篇：`"写短篇"` / `"短故事"` / `"千字文"` / `"微小说"` / `"知乎体"` / `"番茄短篇"` / `"小红书短篇"` / `"想写个短的"` / `"这篇 5000 字"`
-- 长篇：`"开新书"` / `"新长篇"` / `"连载"` / `"我有一百万字"` / `"网络小说"`
+**触发词**（无需先问类型）：
+- 短篇：`写短篇`/`千字文`/`知乎体`/`微小说`/`番茄短篇`/`小红书短篇`/`这篇5000字`/`想写个短的`
+- 长篇：`开新书`/`新长篇`/`连载`/`网络小说`/`我有一百万字`
+- **阶段切换（仅长篇）**：进入B=`进入Phase B`/`继续Phase B`/`下一步写正文`；跳过B=`跳过Phase B`/`只导出大纲`/`我自己写`/`Phase A导出`
 
-中途切换：用户在长篇流程说"改成短篇" → 提示作者选择保留/丢弃已沉淀 SB 字段 → 重新进入新流程。
+中途切换："改成短篇" → 提示保留/丢弃已沉淀SB → 重启流程。
 
 ---
 
-## 长篇路径 · 8 模块
+## 长篇 · 两阶段 8 模块（v1.2.0+）
 
-| # | 模块 | 目标 | 详细方法论 |
-|---|------|------|-----------|
-| **①** | 选题锚定 | 模糊脑洞→可验证选题 | references/01-concept-anchor.md |
-| **②** | 世界观锻造 | 构建自洽世界 | references/02-world-forge.md |
-| **③** | 角色深潜 | 有欲望有缺陷的角色 | references/03-character-dive.md |
-| **④** | 故事脊梁 | 找到故事节奏 | references/04-main-plot.md |
-| **⑤** | 黄金三章 | 用 3 章锁住读者 | references/05-golden-three.md |
-| **⑥** | 章节推演 | 每章目标冲突钩子 | references/06-chapter-plan.md |
-| **⑦** | 伏笔雷达 | 伏笔埋设与回收 | references/07-foreshadow.md |
-| **⑧** | 收线结算 | 线索回收弧光完成 | references/08-resolution.md |
+Phase A（必走）= ①②③④ 写作前准备；Phase B（可选）= ⑤⑥⑦⑧ 写作手艺。④ 完成 → AI 问"进 Phase B？"。
 
----
+| # | 目标 | 详细方法论 |
+|---|------|-----------|
+| **① [A]** 选题锚定 | 模糊脑洞→可验证选题 | references/01-concept-anchor.md |
+| **② [A]** 世界观锻造 | 自洽世界 | references/02-world-forge.md |
+| **③ [A]** 角色深潜 | 欲望+缺陷 | references/03-character-dive.md |
+| **④ [A]** 故事脊梁 | 节奏+主线 | references/04-main-plot.md |
+| **⑤ [B]** 黄金三章 | 3章锁读者 | references/05-golden-three.md |
+| **⑥ [B]** 章节推演 | 章纲目标冲突钩子 | references/06-chapter-plan.md |
+| **⑦ [B]** 伏笔雷达 | 埋设与回收 | references/07-foreshadow.md |
+| **⑧ [B]** 收线结算 | 线索回收弧光 | references/08-resolution.md |
 
-## 短篇路径 · 5 模块
-
-| # | 模块 | 目标 | 详细方法论 |
-|---|------|------|-----------|
-| **①** | 情绪锚点 | 锁定主导情绪 + 一句话钩子 | references/short-emotion-anchor.md |
-| **②** | 意象与极简规则 | 2-3 意象 + 1-2 规则即冲突 | references/short-emotion-anchor.md |
-| **③** | 角色深潜（短篇版） | 1-3 人 + 一句话人设 | references/03-character-dive.md（短篇视角） |
-| **④** | 节拍设计 | 500-1000 字节拍 + 情绪弧线 | references/short-beat-design.md |
-| **⑤** | 结尾类型学 | 5 种结尾策略 + 付费卡点 | references/short-ending-typology.md |
-
-> **注意**：短篇 5 模块编号沿用 ①-⑤，但与长篇 8 模块独立。AI 在对话中需明确告知"我们进入短篇路径的 ① 情绪锚点"以避免混淆。
+阶段触发词：见开场白"阶段切换"。
 
 ---
 
-## 模块依赖关系（DAG · 两条独立路径）
+## 短篇 · 5 模块
 
-### 长篇路径
+| # | 目标 | 详细方法论 |
+|---|------|-----------|
+| ① 情绪锚点 | 主导情绪+钩子 | references/short-emotion-anchor.md |
+| ② 意象与极简规则 | 2-3意象+1-2规则 | references/short-emotion-anchor.md |
+| ③ 角色（短篇版） | 1-3人+一句话人设 | references/03-character-dive.md（短篇视角）|
+| ④ 节拍设计 | 500-1000字节拍 | references/short-beat-design.md |
+| ⑤ 结尾类型学 | 5结尾+付费卡点 | references/short-ending-typology.md |
 
-```
-① 选题 → ② 世界观 → ③ 角色 → ④ 脊梁 → ⑤ 黄金三章
-                                              ↓
-                                        ⑥ 章节 → ⑦ 伏笔 → ⑧ 收线
-```
-
-### 短篇路径
-
-```
-① 情绪锚点 → ② 意象与极简规则 → ③ 角色（短篇版）→ ④ 节拍设计 → ⑤ 结尾类型学
-```
-
-> 两条路径互不交叉。length_type 锁定后 AI 全程只在对应路径内导航。
+> AI 需明确说"短篇路径的 ① 情绪锚点"避免与长篇混淆。
 
 ---
 
-## 模块选择开场白（已问完 length_type 后）
+## DAG
 
-**长篇路径**：
-```
-我们从哪个阶段开始？
-1. 选题锚定 2. 世界观锻造 3. 角色深潜 4. 故事脊梁
-5. 黄金三章 6. 章节推演 7. 伏笔雷达 8. 收线结算
-（也可以直接说"我要开新书"等，我会自动识别）
-```
-
-**短篇路径**：
-```
-我们从哪个阶段开始？
-1. 情绪锚点 2. 意象与极简规则 3. 角色深潜（短篇版）
-4. 节拍设计 5. 结尾类型学
-（也可以直接说"我想写个知乎体短篇"等，我会自动识别）
-```
+长篇：`①→②→③→④ ─虚线(用户选)→ ⑤→⑥→⑦→⑧ → 导出`
+短篇：`①→②→③→④→⑤`
 
 ---
 
-## 触发词优先级
+## 完成标准
 
-1. 明确动作词 > 模糊描述（"添加反派" → ③）
-2. 具体场景 > 抽象需求（"第 5 章怎么写" → ⑥）
-3. 新任务 > 旧任务
-4. **length_type 锁定** > 跨路径猜测（除非用户明确说"改成短篇/长篇"）
+**长篇 Phase A**（任一<60% 不能 GRADUATE）：
+- ① 选题：one_liner/genre/controlling_idea high
+- ② 世界观：core_rules≥3 + power_system 完整
+- ③ 角色：主角 conscious_desire/unconscious_need/fatal_flaw high
+- ④ 故事：structure_type 定了 + 5 checkpoints 全有
 
----
+**长篇 Phase B**：
+- ⑤ 黄金三章：3章 hook/conflict/escalation 全有
+- ⑥ 章节推演：每章 goal/conflict/cool_point/end_hook 4字段齐
+- ⑦ 伏笔雷达：≥1条 plant+payoff
+- ⑧ 收线：unresolved must 全有 proposed_resolution
 
-## 完成标准速查
+**跳过 Phase B 导出**：A 满 + B 标 `*本模块跳过*`，熟手也能拿完整 Story Bible。
 
-### 长篇路径
+**短篇**：
+- ① unity_of_effect 复合短语 + hook ≤30字
+- ② imagery 2-3个 + rules 1-2条（直接制造冲突）
+- ③ 主角 anchor+fatal_flaw high，角色≤3
+- ④ beats 4-12个（每个4 micro字段）+ emotion_curve 完整
+- ⑤ ending.type 定 + paywall_break_point（商业类）
 
-| 模块 | 完成标志 |
-|------|---------|
-| ① 选题锚定 | one_liner / genre / controlling_idea high |
-| ② 世界观锻造 | core_rules ≥ 3，power_system 完整 |
-| ③ 角色深潜 | 主角 conscious_desire / unconscious_need / fatal_flaw high |
-| ④ 故事脊梁 | structure_type 确定，5 checkpoints 全有 |
-| ⑤ 黄金三章 | 3 章 hook / conflict / escalation 全有 |
-| ⑥ 章节推演 | 每章 4 字段齐全 |
-| ⑦ 伏笔雷达 | 至少 1 条 plant + payoff |
-| ⑧ 收线结算 | unresolved must 全有 proposed_resolution |
-
-### 短篇路径
-
-| 模块 | 完成标志 |
-|------|---------|
-| ① 情绪锚点 | unity_of_effect 复合短语 + hook ≤30 字 |
-| ② 意象与极简规则 | imagery 2-3 个 + rules 1-2 条（每条直接制造冲突） |
-| ③ 角色深潜（短篇版） | 主角 anchor + fatal_flaw high，角色数 ≤ 3 |
-| ④ 节拍设计 | beats 4-12 个（每个 4 个 micro 字段）+ emotion_curve 完整 |
-| ⑤ 结尾类型学 | ending.type 确定 + paywall_break_point（商业类） |
-
-详细字段定义见 `references/story-bible-schema.md`。
+字段定义见 `references/story-bible-schema.md`。

@@ -114,6 +114,21 @@
 
 ---
 
+## 九 + 阶段切换（v1.2.0+ 长篇两阶段）
+
+> 仅当 length_type === "long" 时验证。
+
+- [ ] **Phase A 4 模块（①②③④）完成标志全部达标** 才进入过渡话术
+- [ ] **④ GRADUATE 后立即问"是否进入 Phase B"**：不漏触发，也不提前触发
+- [ ] **"进入 Phase B"** 被识别为 `long_phase_transition` 触发词，正确进入 ⑤ [B] 黄金三章
+- [ ] **"跳过 Phase B" / "我自己写" / "只导出大纲"** 被识别为 `skip_triggers`，跳过 B 模块进入导出
+- [ ] **跳过 Phase B 导出**：A 模块字段齐全，B 模块（⑤⑥⑦⑧）字段标 `*本模块跳过*`
+- [ ] **场景 7 升级引导** 在跳过 Phase B 时触发，语气"你可以"非"你必须"
+- [ ] **短篇路径不触发 Phase A/B 提示**：length_type === "short" 时不会出现"进入 Phase B"问询
+- [ ] **metadata.json 的 `phases` 字段** 包含 A（必走）+ B（可选），`trigger_words.long_phase_transition` 有 8 个阶段切换词
+
+---
+
 ## 九 + 短篇路径（短篇 5 模块）
 
 > 仅当 length_type === "short" 时验证。
