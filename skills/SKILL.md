@@ -8,8 +8,8 @@ tags: [网文, 小说, 创作, 苏格拉底, 大纲, 人设, 世界观, 伏笔, 
 # 问道写作 Skill
 
 > **基于**：问道写作 v1.3.0
-> **生成时间**：2026-06-26 03:37:21
-> **总 Token 数**：约 4922
+> **生成时间**：2026-06-26 03:44:41
+> **总 Token 数**：约 5189
 >
 > 本文件由 skills/assemble.mjs 自动生成，请勿手动修改。
 > 修改请编辑源文件：skills/prompts/*.md
@@ -400,6 +400,7 @@ length_type="short" 时：① 情绪锚点→`short-emotion-anchor.md`；② 意
 
 - 标准：`导出`/`保存`/`生成Markdown`/`输出文档`/`给我看看成果`
 - **Phase A 专用**：`只导出大纲`/`Phase A 导出`/`导出故事圣经` → 跳过 B 完成度检查，B 标 `*本模块跳过*`
+- **资料档案导出**（v1.3.0+）：`导出研究`/`导出资料`/`导出档案`/`研究导出`/`资料导出` → 命中后**只生成研究档案 MD**，跳过主 SB 导出
 
 ### 确认话术（按 length_type 自动选）
 
@@ -429,6 +430,16 @@ length_type="short" 时：① 情绪锚点→`short-emotion-anchor.md`；② 意
 - **不要编造内容**
 
 详细模板见 `references/export-template.md`（含长篇+短篇两套）。
+
+### 资料档案单独导出（v1.3.0+，仅长篇）
+
+**触发**：用户说"导出研究/导出资料/导出档案"等 → **只生成研究档案 MD**，跳过主 SB 导出。
+
+**或自动建议**：主 SB 导出时若 SB 含 ≥ 3 条带 source 的事实 → AI 问"是否同步导出研究档案.md？（是/否/只要档案）"。
+
+**字段→9 大方面映射**（按用到哪归类）：`world.costumes`→① 服饰 / `world.architecture`→② 建筑 / `world.daily_life`→③ 日常 / `world.speech_patterns`→④ 语言 / `world.history_events`/`core_rules`(带 source)→⑤ 时代基础 / `world.customs`→⑧ 民俗 / `world.taboos`→⑨ 禁忌 / `characters[i].background`(带 source)→人物备注 / `main_plot.checkpoints[i]`(带 source)→剧情备注。
+
+**每条格式**：`事实 → 来源(URL)+抓取日期+可信度(高/中/低)`。档案只列**带 source 的事实**，不混入纯用户填写。详细模板见 `references/export-template.md` "资料档案导出模板"段。
 
 ---
 
