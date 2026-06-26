@@ -29,7 +29,15 @@ interface SessionStoryBible {
   world?: {
     core_rules?: string[];          // 核心规则（3-5 条）
     power_system_overview?: string; // 力量体系概要
+    // v1.3.0+ 推荐以下字段（向后兼容 string）：
+    // field_value?: string | Array<{fact: string, source: SourceRef}>;
+    // 服饰/饮食/居住/建筑等可分散到 costumes/daily_life/geography/architecture
+    // 语言/民俗/禁忌可分散到 speech_patterns/customs/taboos
   } | null;
+
+  // 资料来源对象（v1.3.0+）
+  // SourceRef = { name: string, url: string, fetched_at: ISO8601_date }
+  // 任何带 source 字段的 SB 字段都遵循这个 schema
 
   // ③ 角色深潜
   characters?: {

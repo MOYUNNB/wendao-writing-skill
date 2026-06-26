@@ -26,6 +26,20 @@
 **6 种参考结构**（按回答动态推荐）：核心裂变/三幕升级/Fichtean/爽文循环/Arc/Save the Cat 15-Beat
 **完成标志**：structure_type 定了 + 5 checkpoints 全有
 
+## 资料检索（v1.3.0+，过渡增强 · 仅长篇 · 非 8 模块之一）
+
+**触发**：④ GRADUATE + length_type="long" → AI 主动建议一次；或用户说"搜资料/查一下/[朝代]资料"。
+
+**流程**：问要不要搜 → 选方面（9 选 N：日常/服饰/建筑/语言/经济/科技/军事/民俗/禁忌，最多 2 方面/轮）→ 联网搜（WebSearch+WebFetch）→ 每方面 3-5 条关键事实+来源 → 摘要展示 → 用户确认后写入对应 SB 字段。**总轮次 ≤ 3**。
+
+**写到哪里**（按用到哪写到哪）：`world.costumes/daily_life/architecture/history_events/speech_patterns/customs/taboos` 或 `characters[i].background` 或 `main_plot.checkpoints[i]` 注释。
+
+**严守**：**绝不写正文** / **绝不编造来源**（搜不到明说"未找到可靠来源"）/ **绝不一次问超过 3 个问题** / 事实必须用户确认才入 SB。
+
+详细见 `references/09-research.md`（9 大方面搜索词表 + 来源分级 + 写入规范）。
+
+---
+
 ## ⑤ [B] 黄金三章（开篇/前三章/第一章/钩子）
 
 **5 层链**：① 表面（第一段读者看到什么，冲突/反常/悬念）→ ② 动机（主角完成什么转变）→ ③ 矛盾（金手指几章揭示，"获得"还是"被发现"）→ ④ 极限（第三章结尾上架钩）→ ⑤ 代价（300字开篇从哪个画面开始）
